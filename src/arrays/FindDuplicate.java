@@ -5,7 +5,7 @@ public class FindDuplicate {
     //method to find duplicate in the array
     static int findDuplicate(int[] arr){
         for (int i = 0; i < arr.length; i++) {
-            int j = 0;
+            int j = i+1;
             while (j < arr.length){
                 if(i != j){
                     if(arr[i] == arr[j]){
