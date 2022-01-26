@@ -7,11 +7,10 @@ public class PrintAllSubString {
         int totalSubstring = size*(size+1)/2;
         while (start < totalSubstring){
             int end = start;
-            while (end <=size){
-                System.out.println(str.substring(start,end+1));
+            while (end <=size) {
+                System.out.println(str.substring(start, end + 1));
                 end++;
             }
-            end = 0;
             start++;
         }
     }
