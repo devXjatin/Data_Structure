@@ -24,7 +24,6 @@ public class ReverseEachWord {
         for (int j = currentWordEnd; j >=countWordStart ; j--) {
             reverseString += str.charAt(j);
         }
-        countWordStart= i+1;
         ans += reverseString+" ";
         return ans;
     }
