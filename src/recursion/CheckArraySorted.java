@@ -12,7 +12,8 @@ public class CheckArraySorted {
 //        for (int i = 1; i < arr.length; i++) {
 //            smallInput[i-1] = arr[i];
 //        }
-        return arr[startIndex] > arr[startIndex+1]? false:isSortedArray(arr, startIndex+1);
+
+        return arr[startIndex] > arr[startIndex + 1]? false: isSortedArray(arr, startIndex + 1);
     }
 
     public static void main(String[] args) {
