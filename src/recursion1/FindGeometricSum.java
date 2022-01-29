@@ -1,4 +1,4 @@
-package recursion;
+package recursion1;
 
 public class FindGeometricSum {
     static double geometricSum(double number){

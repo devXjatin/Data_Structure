@@ -1,4 +1,4 @@
-package recursion;
+package recursion1;
 
 public class SumOfDigits {
     static int sumOfDigits(int number){

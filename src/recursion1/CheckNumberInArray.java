@@ -1,4 +1,4 @@
-package recursion;
+package recursion1;
 
 public class CheckNumberInArray {
     static boolean checkNumber(int[] arr, int startIndex, int search){

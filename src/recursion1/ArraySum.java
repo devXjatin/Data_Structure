@@ -1,4 +1,4 @@
-package recursion;
+package recursion1;
 
 public class ArraySum {
     static int sumOfArray(int[] arr, int startIndex){

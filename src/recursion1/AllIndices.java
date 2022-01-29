@@ -1,4 +1,4 @@
-package recursion;
+package recursion1;
 
 public class AllIndices {
     private static int[] allIndices(int[] arr, int startIndex, int search, int foundSoFar){

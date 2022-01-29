@@ -1,14 +1,22 @@
-package recursion;
+package recursion1;
 
-public class FirstIndex {
+public class LastIndex {
     private static int indexOfNumber(int[]arr, int startIndex, int search){
-        if(startIndex == arr.length-1){
+
+        if(startIndex == arr.length){
             return -1;
         }
-        if(arr[startIndex] == search){
-            return startIndex+1;
+
+        int smallAns = indexOfNumber(arr, startIndex+1, search);
+        if(smallAns != -1 ){
+            return smallAns;
         }
-        return indexOfNumber(arr, startIndex+1, search);
+        if(arr[startIndex] == search) {
+            return startIndex + 1;
+        }else{
+            return -1;
+        }
+
     }
 
     static int indexOfNumber(int[] arr, int search){
@@ -19,4 +27,5 @@ public class FirstIndex {
         int[] arr = {9, 8, 1, 5, 8, 1};
         System.out.println(indexOfNumber(arr, 1));
     }
+
 }

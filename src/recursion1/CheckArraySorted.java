@@ -1,4 +1,4 @@
-package recursion;
+package recursion1;
 
 public class CheckArraySorted {
     static boolean isSortedArray(int[] arr, int startIndex){

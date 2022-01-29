@@ -1,4 +1,4 @@
-package recursion;
+package recursion1;
 
 public class FibonacciSeries {
     static int fibonacciNumber(int n){

@@ -1,4 +1,4 @@
-package recursion;
+package recursion1;
 
 public class RecursiveMultiplication {
     static int recursiveMultiplication(int x, int y){

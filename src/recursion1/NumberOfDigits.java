@@ -1,4 +1,4 @@
-package recursion;
+package recursion1;
 
 public class NumberOfDigits {
     static int numberOfDigits(int n){
