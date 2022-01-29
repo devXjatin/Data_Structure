@@ -13,7 +13,7 @@ public class RemoveXFromString {
    }
 
     public static void main(String[] args) {
-        String str = "abxxcxxa";
+        String str = "abxcxxa";
         System.out.println(removeX(str));
     }
 }
