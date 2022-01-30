@@ -25,7 +25,7 @@ public class MergeSort {
             k++;
         }
         while(j<=end){
-            ans[k]=arr[j];
+            ans[k] = arr[j];
             j++;
             k++;
         }
