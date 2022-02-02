@@ -30,7 +30,7 @@ public class InsertLinkedList {
     public static void main(String[] args) {
         Node<Integer> head = TakeUserInput.takeInput();
         TakeUserInput.print(head);
-        insertLinkedList(head, 3, new Node<>(60));
-        TakeUserInput.print(head);
+       Node<Integer> inserttedhead  = insertLinkedList(head, 0, new Node<>(60));
+        TakeUserInput.print(inserttedhead);
     }
 }
