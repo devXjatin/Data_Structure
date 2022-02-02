@@ -3,15 +3,26 @@ package linkedlist1;
 public class InsertLinkedList {
 
     //insert linkedList
-    static void insertLinkedList(Node<Integer> head, int i, Node<Integer> currentNode){
+    static Node<Integer> insertLinkedList(Node<Integer> head, int i, Node<Integer> currentNode){
+
+        if(i == 0){
+            currentNode.next = head;
+            head = currentNode;
+            return head;
+        }
+
         Node<Integer> temp = head;
 
-        while(temp.next !=null && i-1 !=0){
+        while(temp !=null && i-1 !=0){
             temp = temp.next;
             i--;
         }
+        if(temp == null){
+            return head;
+        }
         currentNode.next = temp.next;
         temp.next = currentNode;
+        return head;
     }
 
 
