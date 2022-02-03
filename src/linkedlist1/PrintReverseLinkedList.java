@@ -1,6 +1,6 @@
 package linkedlist1;
 
-public class ReverseLinkedList {
+public class PrintReverseLinkedList {
     //reverse linkedlist
     static void printReverse(Node<Integer> head){
         if(head == null){
