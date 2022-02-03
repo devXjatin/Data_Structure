@@ -12,6 +12,5 @@ public class ReverseLinkedList {
     public static void main(String[] args) {
         Node<Integer> head = TakeUserInput.takeInput();
         printReverse(head);
-        TakeUserInput.print(head);
     }
 }
