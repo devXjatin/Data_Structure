@@ -3,7 +3,7 @@ package linkedlist1;
 import java.util.Scanner;
 
 public class TakeUserInput {
-        static Scanner scn = new Scanner(System.in);
+      public  static Scanner scn = new Scanner(System.in);
         //take user input in linkedlist
         public static Node<Integer> takeInput(){
             Node<Integer> head = null, tail = null;
