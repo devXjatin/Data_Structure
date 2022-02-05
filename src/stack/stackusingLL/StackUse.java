@@ -7,8 +7,10 @@ public class StackUse {
         for (int i = 0; i < arr.length; i++) {
             stack.push(arr[i]);
         }
+        System.out.println(stack.size()+"size");
         while(!stack.isEmpty()){
             System.out.println(stack.pop());
         }
+        System.out.println(stack.size());
     }
 }

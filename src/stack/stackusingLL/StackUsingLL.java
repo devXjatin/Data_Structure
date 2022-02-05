@@ -37,6 +37,7 @@ public class StackUsingLL<T> {
         }
         T temp = head.data;
         head = head.next;
+        size--;
         return temp;
     }
 
