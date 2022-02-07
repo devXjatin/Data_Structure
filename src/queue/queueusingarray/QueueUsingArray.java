@@ -29,6 +29,9 @@ public class QueueUsingArray {
     }
 
     public void enqueue(int element){
+        if(size == data.length){
+            doubleCapacity();
+        }
         if(isEmpty()){
             front = 0;
         }
@@ -36,6 +39,21 @@ public class QueueUsingArray {
         data[rear] = element;
         size++;
 
+    }
+
+    private void doubleCapacity(){
+        int[] temp = data;
+        data = new int[2* temp.length];
+        int index = 0;
+        for (int i = front; i < temp.length; i++) {
+            data[index++]= temp[i];
+        }
+        for (int i = 0; i < front-1; i++) {
+            data[index++] = temp[i];
+
+        }
+        front = 0;
+        rear = temp.length-1;
     }
 
     public int front(){
