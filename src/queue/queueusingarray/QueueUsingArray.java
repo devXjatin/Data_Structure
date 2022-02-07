@@ -29,14 +29,33 @@ public class QueueUsingArray {
     }
 
     public void enqueue(int element){
+        if(isEmpty()){
+            front = 0;
+        }
+        rear++;
+        data[rear] = element;
+        size++;
 
     }
 
     public int front(){
-
+        if(isEmpty()){
+            return -1;
+        }
+        return data[front];
     }
 
     public int dequeue(){
-
+        if(isEmpty()){
+            return -1;
+        }
+        int temp = data[front];
+        front++;
+        size--;
+        if(size == data.length){
+            front = -1;
+            rear = -1;
+        }
+        return temp;
     }
 }
