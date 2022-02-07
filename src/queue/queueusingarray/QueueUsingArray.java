@@ -32,7 +32,7 @@ public class QueueUsingArray {
         if(isEmpty()){
             front = 0;
         }
-        rear++;
+        rear = (rear+1)%data.length;    //circular queue
         data[rear] = element;
         size++;
 
@@ -50,7 +50,7 @@ public class QueueUsingArray {
             return -1;
         }
         int temp = data[front];
-        front++;
+        front=(front+1)% data.length;   //circular queue
         size--;
         if(size == data.length){
             front = -1;
