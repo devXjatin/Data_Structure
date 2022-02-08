@@ -1,4 +1,4 @@
-package tree;
+package generictree;
 
 public class LargestNodeData {
     static int largestData(TreeNode<Integer> root){
