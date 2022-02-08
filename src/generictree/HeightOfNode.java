@@ -1,4 +1,4 @@
-package tree;
+package generictree;
 
 public class HeightOfNode {
 
