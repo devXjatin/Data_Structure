@@ -19,6 +19,7 @@ public class QueueReverse<T> {
             queue.add(element);
         }
         queueReverse(queue);
+
         while (!queue.isEmpty()){
             System.out.print(queue.poll()+" ");
         }
