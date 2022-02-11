@@ -18,6 +18,7 @@ public class QueueReverse<T> {
         for(var element: arr){
             queue.add(element);
         }
+        
         queueReverse(queue);
 
         while (!queue.isEmpty()){
