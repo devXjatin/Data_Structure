@@ -43,6 +43,7 @@ public class StackUsingQueue<T> {
     }
 
     public static void main(String[] args) {
+
         StackUsingQueue<Integer> stack = new StackUsingQueue<>();
         int[] arr = {10, 20, 30, 40, 50};
         for(var ele:arr){
