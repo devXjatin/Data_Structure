@@ -11,14 +11,13 @@ public class QueueReverse<T> {
         queueReverse(queue);
         queue.add(temp);
     }
-    
+
     public static void main(String[] args) {
         int[] arr = {10,20,30,40, 50};
         Queue<Integer> queue = new LinkedList<>();
         for(var element: arr){
             queue.add(element);
         }
-
         queueReverse(queue);
 
         while (!queue.isEmpty()){
