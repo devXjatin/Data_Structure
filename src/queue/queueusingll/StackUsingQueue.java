@@ -25,6 +25,7 @@ public class StackUsingQueue<T> {
         while(!queue1.isEmpty()){
             queue2.add(queue1.poll());
         }
+
         queue1.add(element);
         size++;
         while (!queue2.isEmpty()){
