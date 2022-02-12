@@ -15,7 +15,6 @@ public class SineWave {
             }else{
                 for (int j = cols-1; j >=0 ; j--) {
                     System.out.print(arr[j][i]+" ");
-
                 }
             }
         }
