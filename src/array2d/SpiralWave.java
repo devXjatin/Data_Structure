@@ -17,7 +17,6 @@ public class SpiralWave {
 
                 }
             }
-
         }
     }
     public static void main(String[] args) {
