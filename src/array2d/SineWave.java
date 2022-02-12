@@ -18,7 +18,6 @@ public class SineWave {
 
                 }
             }
-
         }
     }
     public static void main(String[] args) {
