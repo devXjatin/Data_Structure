@@ -37,7 +37,6 @@ public class TreeUse {
                 frontNode.children.add(childNode);
                 pendingNodes.add(childNode);
             }
-
         }
         return root;
     }
