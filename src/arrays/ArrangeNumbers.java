@@ -18,6 +18,7 @@ public class ArrangeNumbers {
                 arr[start] = number;
             }
         }
+
     }
 
     //method to print array
