@@ -20,6 +20,28 @@ public class BinaryTreeUse {
 
     }
 
+    static BinaryTreeNode<Integer> takeTreeInputBetter(boolean isRoot, int parentNode, boolean isLeft){
+        if(isRoot){
+            System.out.println("Enter root data: ");
+        }else{
+            if(isLeft){
+                System.out.println("Enter left child of "+parentNode);
+            }else{
+                System.out.println("Enter right child of "+parentNode);
+            }
+        }
+        int rootData = scn.nextInt();
+        if(rootData==-1){
+            return null;
+        }
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(rootData);
+        BinaryTreeNode<Integer> leftChild =takeTreeInputBetter(false, rootData, true);
+        BinaryTreeNode<Integer> rightChild = takeTreeInputBetter(false, rootData, false);
+        root.left = leftChild;
+        root.right = rightChild;
+        return root;
+    }
+
     static void printDetailed(BinaryTreeNode<Integer> root){
         if(root==null){
             return;
@@ -37,7 +59,8 @@ public class BinaryTreeUse {
     }
 
     public static void main(String[] args) {
-        BinaryTreeNode<Integer> root = takeTreeInput();
+//        BinaryTreeNode<Integer> root = takeTreeInput();/*/
+        BinaryTreeNode<Integer> root = takeTreeInputBetter(true, 0, true);
         printDetailed(root);
     }
 }
