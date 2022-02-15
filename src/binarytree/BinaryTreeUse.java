@@ -31,6 +31,7 @@ public class BinaryTreeUse {
         if(root.right !=null){
             System.out.print("R"+root.right.data);
         }
+        System.out.println();   //next line
         printDetailed(root.left);
         printDetailed(root.right);
     }
