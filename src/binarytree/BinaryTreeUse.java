@@ -20,7 +20,7 @@ public class BinaryTreeUse {
 
     }
 
-    static BinaryTreeNode<Integer> takeTreeInputBetter(boolean isRoot, int parentNode, boolean isLeft){
+    public static BinaryTreeNode<Integer> takeTreeInputBetter(boolean isRoot, int parentNode, boolean isLeft){
         if(isRoot){
             System.out.println("Enter root data: ");
         }else{
@@ -42,7 +42,7 @@ public class BinaryTreeUse {
         return root;
     }
 
-    static void printDetailed(BinaryTreeNode<Integer> root){
+   public static void printDetailed(BinaryTreeNode<Integer> root){
         if(root==null){
             return;
         }
