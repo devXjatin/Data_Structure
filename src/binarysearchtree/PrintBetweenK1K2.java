@@ -18,7 +18,6 @@ public class PrintBetweenK1K2 {
             printBetweenK1K2(root.left,k1, k2);
             printBetweenK1K2(root.right, k1, k2);
         }
-
     }
 
     public static void main(String[] args) {
