@@ -8,7 +8,7 @@ public class LowestCommonAncestor {
     static BinaryTreeNode<Integer> lowestCommonAncestor(BinaryTreeNode<Integer> root, BinaryTreeNode<Integer> p,
                                                         BinaryTreeNode<Integer> q){
         if(root == null){
-            return root;
+            return null;
         }
         if(root.data >p.data && root.data>q.data){
             return lowestCommonAncestor(root.left, p,q);
