@@ -17,6 +17,7 @@ public class LowestCommonAncestor {
             return lowestCommonAncestor(root.right, p, q);
         }
         return root;
+
     }
 
     public static void main(String[] args) {
