@@ -37,6 +37,7 @@ public class DeleteNNode {
             temp.next = null;
         }
         return head;
+
     }
 
     public static void main(String[] args) {
