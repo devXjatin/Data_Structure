@@ -16,6 +16,7 @@ public class RemoveDuplicates {
             }
         }
         return al;
+
     }
 
     public static void main(String[] args) {
