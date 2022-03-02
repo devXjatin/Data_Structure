@@ -19,4 +19,12 @@ public class PriorityQueue {
         return heap.size();
     }
 
+    //return min element in priority queue
+    int getMin(){
+        if(isEmpty()){
+            return -1;
+        }
+        return heap.get(0);
+    }
+
 }
