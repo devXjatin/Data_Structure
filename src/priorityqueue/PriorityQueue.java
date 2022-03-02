@@ -27,4 +27,24 @@ public class PriorityQueue {
         return heap.get(0);
     }
 
+    //insert element in Priority queue
+    void insert(int element){
+        heap.add(element);
+
+        //up-heapify to maintain the Complete binary tree properties
+        int childIndex = heap.size()-1;
+        int parentIndex = (childIndex-1)/2;
+        while(childIndex>0){
+            if(heap.get(childIndex) < heap.get(parentIndex)){
+                int temp = heap.get(childIndex);
+                heap.set(childIndex, heap.get(parentIndex));
+                heap.set(parentIndex, temp);
+                childIndex = parentIndex;
+                parentIndex = (childIndex-1)/2;
+            }else{
+                return;
+            }
+        }
+    }
+
 }
