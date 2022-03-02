@@ -5,6 +5,8 @@ public class TrieMain {
         Trie t = new Trie();
         t.add("this");
         t.add("news");
-        System.out.println(t.search("new"));
+        System.out.println(t.search("news"));
+        t.remove("news");
+        System.out.println(t.search("news"));
     }
 }
