@@ -2,7 +2,7 @@ package tries;
 
 public class TrieNode {
     char data;
-    TrieNode children[];
+    TrieNode[] children;
     boolean isTerminating;
     public TrieNode(char data){
         this.data = data;
@@ -12,7 +12,7 @@ public class TrieNode {
 }
 
 class Trie{
-    private TrieNode root;
+    private final TrieNode root;
     public Trie(){
         root = new TrieNode('\0');
     }
@@ -30,7 +30,7 @@ class Trie{
 
     //add in trie
     public void add(String word){
-        add(root, word)
+        add(root, word);
     }
 
 }
