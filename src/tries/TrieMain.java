@@ -8,5 +8,6 @@ public class TrieMain {
         System.out.println(t.search("news"));
         t.remove("news");
         System.out.println(t.search("news"));
+
     }
 }
