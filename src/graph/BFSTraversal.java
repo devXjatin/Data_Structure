@@ -34,18 +34,26 @@ public class BFSTraversal {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int V = scn.nextInt();
-        ArrayList<ArrayList<Integer>> adj = new ArrayList<>(V);
+        int E = scn.nextInt();
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
 
         for (int i = 0; i <=V; i++) {
             adj.add(new ArrayList<>());
         }
-        for(int i = 0; i<V; i++){
+        for(int i = 0; i<E; i++){
             int u = scn.nextInt();
             int v = scn.nextInt();
             adj.get(u).add(v);
             adj.get(v).add(u);
+
         }
         ArrayList<Integer> bfs = bfsTraversal(adj, V);
         System.out.println(bfs);
+        System.out.println(adj);
+        for(int it: adj.get(1)){
+            System.out.println(it);
+        }
+//        System.out.println(adj.get(1));
     }
 }
+
