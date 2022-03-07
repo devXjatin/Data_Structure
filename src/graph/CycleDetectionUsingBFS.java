@@ -57,6 +57,7 @@ return false;
         for (int i = 0; i <=V; i++) {
             adj.add(new ArrayList<>());
         }
+
         for(int i = 0; i<E; i++){
             int u = scn.nextInt();
             int v = scn.nextInt();
