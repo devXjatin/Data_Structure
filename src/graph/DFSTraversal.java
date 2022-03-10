@@ -39,7 +39,6 @@ public class DFSTraversal {
             int v = scn.nextInt();
             adj.get(u).add(v);
             adj.get(v).add(u);
-
         }
         ArrayList<Integer> dfs = dfsTraversal(adj, V);
         System.out.println(dfs);
