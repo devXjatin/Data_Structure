@@ -40,6 +40,7 @@ public class DFSTraversal {
             adj.get(u).add(v);
             adj.get(v).add(u);
         }
+
         ArrayList<Integer> dfs = dfsTraversal(adj, V);
         System.out.println(dfs);
         System.out.println(adj);
