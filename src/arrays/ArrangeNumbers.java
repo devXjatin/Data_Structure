@@ -22,9 +22,9 @@ public class ArrangeNumbers {
     }
 
     //method to print array
-    static void printArray(int[] arr){
-        for(var val : arr){
-            System.out.print(val+" ");
+    static void printArray(int[] arr) {
+        for (var val : arr) {
+            System.out.print(val + " ");
         }
     }
     public static void main(String[] args) {
