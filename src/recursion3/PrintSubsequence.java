@@ -1,9 +1,11 @@
 package recursion3;
 
 public class PrintSubsequence {
+    static int counter =0;
     static void printSubsequence(String str, String outputSoFar){
         if(str.length() ==0){
-            System.out.println(outputSoFar);
+            System.out.print(outputSoFar+" ");
+            counter++;
             return;
         }
         //we choose to not include first character
@@ -19,5 +21,7 @@ public class PrintSubsequence {
 
     public static void main(String[] args) {
         printSubsequence("xyz");
+//        System.out.println();
+        System.out.println(counter);
     }
 }
