@@ -17,15 +17,16 @@ public class PrintAllPath {
         }
     }
 
-    public static void printAllPaths(ArrayList<ArrayList<Edge>> graph, int src, int dest, boolean[] visited, String psf){
+    public static void printAllPaths(ArrayList<ArrayList<Edge>> graph, int src, int dest, boolean[] visited, String psf, ArrayList<String> allPaths){
         if(src==dest){
             System.out.println(psf);
+            allPaths.add(psf);
             return;
         }
         visited[src]= true;
         for(Edge edge:graph.get(src)){
             if(!visited[edge.nbr]){
-                printAllPaths(graph, edge.nbr, dest, visited, psf+edge.nbr);
+                printAllPaths(graph, edge.nbr, dest, visited, psf+edge.nbr, allPaths);
             }
         }
         visited[src]=false;
@@ -50,6 +51,10 @@ public class PrintAllPath {
         int src = 0;
         int dest = 6;
         boolean[] visited = new boolean[vtces+1];
-        printAllPaths(graph, src, dest, visited, src+"");
+        ArrayList<String> allPaths = new ArrayList<>();
+
+        printAllPaths(graph, src, dest, visited, src+"", allPaths);
+        System.out.println(allPaths);
     }
 }
+
