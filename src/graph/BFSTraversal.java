@@ -1,5 +1,8 @@
 package graph;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -7,53 +10,40 @@ import java.util.Scanner;
 
 public class BFSTraversal {
 
-    static ArrayList<Integer> bfsTraversal(ArrayList<ArrayList<Integer>> adj, int n){
-        ArrayList<Integer> bfs = new ArrayList<>();
-        boolean[] visited = new boolean[n+1];
-        for (int i = 1; i <= n; i++) {
-            if(!visited[i]){
-                Queue<Integer> q = new LinkedList<>();
-                q.add(i);
-                visited[i] = true;
-                while (!q.isEmpty()){
-                    Integer node = q.poll();
-                    bfs.add(node);
-                    for(Integer it: adj.get(node)){
-                        if(!visited[it]){
-                            visited[it] = true;
-                            q.add(it);
-                        }
-                    }
+    private static void bfsTraversal(ArrayList<ArrayList<Integer>> graph, int src, boolean[] visited){
+        Queue<Integer> queue = new LinkedList<>();
+        visited[src] = true;
+        queue.add(src);
+        while(!queue.isEmpty()){
+            int node = queue.poll();
+            System.out.print(node+" ");
+            for(Integer value: graph.get(node)){
+                if(!visited[value]){
+                    visited[value]=true;
+                    queue.add(value);
                 }
             }
-
         }
-        return bfs;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Scanner scn = new Scanner(System.in);
-        int V = scn.nextInt();
-        int E = scn.nextInt();
-        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-
-        for (int i = 0; i <=V; i++) {
-            adj.add(new ArrayList<>());
+        int vtces = 7;
+        int edges = 8;
+        ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
+        for (int i = 0; i < vtces; i++) {
+            graph.add(new ArrayList<>());
         }
-        for(int i = 0; i<E; i++){
-            int u = scn.nextInt();
-            int v = scn.nextInt();
-            adj.get(u).add(v);
-            adj.get(v).add(u);
-
+        for(int i =0; i<edges; i++){
+            String[] parts = br.readLine().split(" ");
+            int v1 = Integer.parseInt(parts[0]);
+            int v2 = Integer.parseInt(parts[1]);
+            graph.get(v1).add(v2);
+            graph.get(v2).add(v1);
         }
-        ArrayList<Integer> bfs = bfsTraversal(adj, V);
-        System.out.println(bfs);
-        System.out.println(adj);
-        for(int it: adj.get(1)){
-            System.out.println(it);
-        }
-//        System.out.println(adj.get(1));
+        boolean[] visited = new boolean[vtces];
+        bfsTraversal(graph, 0, visited);
     }
-}
 
+}
