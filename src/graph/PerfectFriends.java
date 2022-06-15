@@ -17,10 +17,10 @@ public class PerfectFriends {
         }
     }
 
-    public static void drawTreeGenerateComponent(ArrayList<ArrayList<GetConnectedComponent.Edge>> graph, int src, boolean[] visited, ArrayList<Integer> comp){
+    public static void drawTreeGenerateComponent(ArrayList<ArrayList<Edge>> graph, int src, boolean[] visited, ArrayList<Integer> comp){
         visited[src] = true;
         comp.add(src);
-        for(GetConnectedComponent.Edge edge: graph.get(src)){
+        for(Edge edge: graph.get(src)){
             if(!visited[edge.nbr]){
                 drawTreeGenerateComponent(graph, edge.nbr, visited,comp);
             }
@@ -33,7 +33,7 @@ public class PerfectFriends {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int vtces = 7;
         int edges = 5;
-        ArrayList<ArrayList<GetConnectedComponent.Edge>> graph = new ArrayList<>();
+        ArrayList<ArrayList<Edge>> graph = new ArrayList<>();
         for (int i = 0; i < vtces; i++) {
             graph.add(new ArrayList<>());
         }
@@ -42,8 +42,8 @@ public class PerfectFriends {
             int v1 = Integer.parseInt(parts[0]);
             int v2 = Integer.parseInt(parts[1]);
             int wt = Integer.parseInt(parts[2]);
-            graph.get(v1).add(new GetConnectedComponent.Edge(v1, v2, wt));
-            graph.get(v2).add(new GetConnectedComponent.Edge(v2, v1, wt));
+            graph.get(v1).add(new Edge(v1, v2, wt));
+            graph.get(v2).add(new Edge(v2, v1, wt));
         }
         boolean[] visited = new boolean[vtces];
         ArrayList<ArrayList<Integer>> comps = new ArrayList<>();
