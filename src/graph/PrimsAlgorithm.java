@@ -10,12 +10,13 @@ import java.util.Scanner;
 public class PrimsAlgorithm {
     static class Pair implements Comparable<Pair>{
         int vertex;
-        int nbr;
+        int av; //acquiring vertex which is set to be -1 coz we assume 0 vertex comes from it and this is also used
+                //for neighbour vertex.
         int weight;
-        Pair( int vertex,int nbr, int weight){
+        Pair( int vertex,int av, int weight){
             this.vertex= vertex;
             this.weight = weight;
-            this.nbr=nbr;
+            this.av=av;
         }
         @Override
         public int compareTo(Pair o) {
@@ -32,12 +33,12 @@ public class PrimsAlgorithm {
                 continue;
             }
             visited[node.vertex]=true;
-            if(node.nbr != -1){
-                System.out.println("["+node.nbr+" - "+ node.vertex+" @"+ node.weight+"]");
+            if(node.av != -1){
+                System.out.println("["+node.av+" - "+ node.vertex+" @"+ node.weight+"]");
             }
             for(Pair v : graph.get(node.vertex)){
-                if(!visited[v.nbr]){
-                    pq.add(new Pair(v.nbr, node.vertex, v.weight));
+                if(!visited[v.av]){
+                    pq.add(new Pair(v.av, node.vertex, v.weight));
                 }
             }
         }
